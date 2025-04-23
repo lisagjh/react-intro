@@ -1,8 +1,3 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-}
-
 button.square {
   display: flex;
   justify-content: center;
