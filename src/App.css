@@ -141,10 +141,13 @@ button.square {
 .todo__form {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .todo__form input {
+  width: 100%;
   padding: 1rem 1.5rem;
   border-radius: 0.1rem;
   border: none;
@@ -155,14 +158,18 @@ button.square {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 2rem;
+  width: 2.5rem;
+  min-height: 3rem;
   border: none;
   background-color: rgb(149, 189, 254);
   color: rgb(12, 47, 102);
   transition: 0.25s ease-in-out;
   cursor: pointer;
+}
+
+.todo__button__submit:hover {
+  background-color: rgb(0, 119, 255);
+  color: rgb(201, 222, 255);
 }
 
 /* to do list of tasks */
@@ -227,6 +234,12 @@ button.square {
   border-radius: 2px;
   transition: 0.25s ease-in-out;
   cursor: pointer;
+}
+
+.todo__view__button.active {
+  background-color: rgb(198, 220, 255);
+  border: 2px solid rgb(241, 246, 255);
+  box-shadow: 0 0 0 2px rgb(122, 170, 247);
 }
 
 .todo__view__button span {
