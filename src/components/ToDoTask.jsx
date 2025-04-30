@@ -1,15 +1,13 @@
 export default function ToDoTask({ task, onRemove, completed }) {
   return (
-    <li
-      className={`todo__task ${
-        completed ? "todo__task__completed" : "todo__task"
-      }`}
-    >
+    <li className={`todo__task ${completed ? "todo__task__completed" : ""}`}>
       {task}
       <div className="buttons">
-        <button className="todo__task__button" onClick={onRemove}>
-          x
-        </button>
+        {!completed && (
+          <button className="todo__task__button" onClick={onRemove}>
+            x
+          </button>
+        )}
       </div>
     </li>
   );
