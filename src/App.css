@@ -206,3 +206,43 @@ button.square {
   transition: 0.25s ease-in-out;
   cursor: pointer;
 }
+
+.todo__view {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.todo__view__button {
+  background-color: rgb(190, 212, 248);
+  color: rgb(37, 60, 96);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  min-width: fit-content;
+  border: none;
+  border-radius: 2px;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.todo__view__button span {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: rgb(222, 232, 249);
+  color: rgb(37, 60, 96);
+}
+
+.todo__view__button:hover {
+  background-color: rgb(149, 189, 254);
+  color: rgb(37, 60, 96);
+}

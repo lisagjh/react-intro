@@ -1,10 +1,12 @@
 import { useState } from "react";
 import ToDoForm from "./ToDoForm";
-import ToDoTask from "./ToDoTask";
+import ToDoViewButton from "./ToDoViewButton";
+import ToDoView from "./ToDoView";
 
 export default function ToDoList() {
   const [tasks, setTasks] = useState([]);
   const [finishedTasks, setFinishedTasks] = useState([]);
+  const [view, setView] = useState("all");
 
   const addTask = (newTask) => {
     if (newTask.trim() !== "") {
@@ -12,48 +14,28 @@ export default function ToDoList() {
     }
   };
 
-  function finishTask(indexToRemove) {
-    // Get the task to move to finishedTasks
-    const taskToFinish = tasks[indexToRemove];
-
-    // Remove the task from tasks
-    const updatedTasks = tasks.filter((task, index) => index !== indexToRemove);
-
-    // Add the task to finishedTasks
-    setFinishedTasks([...finishedTasks, taskToFinish]);
-
-    // Update the tasks state
-    setTasks(updatedTasks);
-  }
+  const finishTask = (index) => {
+    const task = tasks[index];
+    setTasks(tasks.filter((_, i) => i !== index));
+    setFinishedTasks([...finishedTasks, task]);
+  };
 
   return (
     <>
       <h2>ToDo</h2>
-
       <ToDoForm onAddTask={addTask} />
-
-      <h3>Pending Tasks</h3>
-      <ul className="todo__list">
-        {tasks.map((task, index) => (
-          <ToDoTask
-            key={index}
-            task={task}
-            onRemove={() => finishTask(index)}
-          />
-        ))}
-      </ul>
-
-      <h3>Finished Tasks</h3>
-      <ul className="todo__list">
-        {finishedTasks.map((task, index) => (
-          <ToDoTask
-            key={index}
-            task={task}
-            completed={true}
-            onRemove={() => finishTask(index)}
-          />
-        ))}
-      </ul>
+      <ToDoViewButton
+        view={view}
+        setView={setView}
+        tasks={tasks}
+        finishedTasks={finishedTasks}
+      />
+      <ToDoView
+        view={view}
+        tasks={tasks}
+        finishedTasks={finishedTasks}
+        onFinish={finishTask}
+      />
     </>
   );
 }
