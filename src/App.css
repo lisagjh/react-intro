@@ -34,11 +34,14 @@ button.square {
 .counter {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
   margin: 0 auto;
   border-radius: 5px;
   box-shadow: 0 0 2px 0px rgba(17, 0, 127, 0.5);
+  min-width: 20rem;
 }
 
 .counter_odd {
@@ -52,7 +55,6 @@ button.square {
 .counter_button {
   min-width: 10rem;
   padding: 1rem;
-  margin: 0 auto;
   border-radius: 2rem;
   border: none;
   background-color: rgb(149, 189, 254);
@@ -67,8 +69,8 @@ button.square {
 }
 
 .counter_button_reset {
+  min-width: 9rem;
   padding: 0.5rem 1rem;
-  margin: 0 auto;
   border-radius: 0.1rem;
   border: none;
   background-color: rgb(253, 213, 200);
