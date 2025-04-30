@@ -18,7 +18,7 @@ export default function ToDoForm({ onAddTask }) {
         type="text"
         id="new-todo"
         name="new-todo"
-        placeholder="What needs to be done?"
+        placeholder="Add new task"
         className="todo__input"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}

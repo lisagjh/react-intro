@@ -135,7 +135,9 @@ button.square {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 2px 0 rgb(131, 171, 208);
+  min-width: 25rem;
 }
 
 .todo__form {
@@ -149,7 +151,6 @@ button.square {
 .todo__form input {
   width: 100%;
   padding: 1rem 1.5rem;
-  border-radius: 0.1rem;
   border: none;
   box-shadow: 0 0 1px 0px rgba(17, 0, 127, 0.75);
 }
@@ -194,24 +195,34 @@ button.square {
   box-shadow: 0 0 1px 0px rgba(17, 0, 127, 0.75);
 }
 
-.todo__task__completed {
-  background-color: rgb(243, 251, 248);
-  /* box-shadow: 0 0 1px 0 solid rgb(131, 208, 179); */
-  border: 1px solid rgb(131, 208, 179);
-}
-
 .todo__task__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
   border-radius: 2rem;
   border: none;
-  background-color: rgb(255, 173, 172);
-  color: rgb(65, 17, 16);
+  background-color: rgb(190, 212, 248);
+  color: rgb(3, 63, 94);
   transition: 0.25s ease-in-out;
   cursor: pointer;
+}
+
+/* completed task */
+.todo__task__completed {
+  background-color: rgb(246, 253, 251);
+  box-shadow: 0 0 1px 0 rgb(4, 87, 55);
+}
+
+.todo__task__completed span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(143, 221, 174);
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 2rem;
 }
 
 .todo__view {

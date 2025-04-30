@@ -8,6 +8,7 @@ export default function ToDoTask({ task, onRemove, completed }) {
             x
           </button>
         )}
+        {completed && <span>✓</span>}
       </div>
     </li>
   );

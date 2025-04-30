@@ -21,8 +21,7 @@ export default function ToDoList() {
   };
 
   return (
-    <>
-      <h2>ToDo</h2>
+    <div className="todo">
       <ToDoForm onAddTask={addTask} />
       <ToDoViewButton
         view={view}
@@ -36,6 +35,6 @@ export default function ToDoList() {
         finishedTasks={finishedTasks}
         onFinish={finishTask}
       />
-    </>
+    </div>
   );
 }
