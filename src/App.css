@@ -35,17 +35,18 @@ button.square {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin: 0 auto;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 2px 0px rgba(17, 0, 127, 0.5);
 }
 
-.odd {
-  background-color: rgb(255, 255, 255);
+.counter_odd {
+  background-color: rgb(246, 186, 186);
 }
 
-.even {
-  background-color: rgb(240, 240, 240);
+.counter_even {
+  background-color: rgb(183, 244, 227);
 }
 
 .counter_button {
