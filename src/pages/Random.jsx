@@ -1,10 +1,10 @@
 import Counter from "../components/Counter";
 
-export default function About() {
+export default function Random() {
   return (
     <>
       <main>
-        <h1> About Page </h1>
+        <h1> Random Page </h1>
         <div className="wrapper">
           <Counter />
         </div>

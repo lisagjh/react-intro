@@ -7,7 +7,7 @@ export default function Nav() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/random">Random</Link>
         </li>
         <li>
           <Link to="/game">Game</Link>

@@ -1,3 +1,9 @@
+button {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* Game */
 button.square {
   display: flex;
   justify-content: center;
@@ -24,10 +30,22 @@ button.square {
   gap: 0.5rem;
 }
 
+/* Counter */
 .counter {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.odd {
+  background-color: rgb(255, 255, 255);
+}
+
+.even {
+  background-color: rgb(240, 240, 240);
 }
 
 .counter_button {
@@ -37,13 +55,14 @@ button.square {
   border-radius: 2rem;
   border: none;
   background-color: rgb(149, 189, 254);
+  color: rgb(12, 47, 102);
   transition: 0.25s ease-in-out;
   cursor: pointer;
 }
 
 .counter_button:hover {
   background-color: rgb(0, 119, 255);
-  color: white;
+  color: rgb(201, 222, 255);
 }
 
 .counter_button_reset {
