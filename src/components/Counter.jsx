@@ -23,7 +23,7 @@ export default function Counter() {
     return () => clearInterval(interval); // clean up
   }, [isTimerRunning]);
 
-  // Klikken functie
+  // click to start timer
   const handleClick = () => {
     if (!isTimerRunning) {
       setIsTimerRunning(true); // start timer on first click
@@ -51,11 +51,18 @@ export default function Counter() {
     >
       <p>Je hebt {count} keer geklikt.</p>
       <button onClick={handleClick} className="counter_button">
-        Klik mij
+        Start
       </button>
-      <button onClick={handleReset} className="counter_button_reset">
-        Reset
-      </button>
+      {isTimerRunning && (
+        <button onClick={handleReset} className="counter_button_stop">
+          Stop
+        </button>
+      )}
+      {!isTimerRunning && (
+        <button onClick={handleReset} className="counter_button_reset">
+          Reset
+        </button>
+      )}
 
       <p>Time elapsed: {timer / 1000} seconds</p>
 
