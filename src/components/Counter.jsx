@@ -21,7 +21,7 @@ export default function Counter() {
     }
 
     return () => clearInterval(interval); // clean up
-  }, [isTimerRunning]);
+  }, [isTimerRunning]);``
 
   // click to start timer
   const handleClick = () => {
