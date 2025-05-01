@@ -8,6 +8,7 @@ export default function Random() {
         <h1> Random Page </h1>
 
         <div className="wrapper flex flex-col justify-center items-center gap-10">
+          <Counter />
           <ToDoList />
         </div>
       </main>
