@@ -3,19 +3,20 @@
 *Mijn aantekeningen terwijl ik React leer en alles verwarrend vind.*
 ## Inhoud
 
-- [[#Componenten]]
-  -  [[#Markup - JSX]]
-  - [[#Classes]]
-  - [[#Voorbeeld - Component]]
-- [[#Routing]]
-  - [[#Layouts]]
-  - [[#Link]]
-- [[#Hooks]]
-  - [[#useState]]
-  - [[#useEffect]]
-  - [[#useContext]]
-  - [[#Other]]
-- [[#Bronnen]]
+- [Componenten](#componenten)
+  - [Markup - JSX](#markup---jsx)
+  - [Classes](#classes)
+  - [Voorbeeld - Component](#voorbeeld---component)
+- [Routing](#routing)
+  - [Layouts](#layouts)
+  - [Link](#link)
+- [Hooks](#hooks)
+  - [useState](#usestate)
+  - [useEffect](#useeffect)
+  - [useContext](#usecontext)
+  - [Other](#other)
+- [Bronnen](#bronnen)
+
 
 ## Installatie
 
